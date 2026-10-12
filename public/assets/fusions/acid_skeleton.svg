@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="acidBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#052805" />
+      <stop offset="70%" stop-color="#021402" />
+      <stop offset="100%" stop-color="#000800" />
+    </radialGradient>
+    <linearGradient id="slimeGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#55ff00" />
+      <stop offset="50%" stop-color="#22cc00" />
+      <stop offset="100%" stop-color="#0d6600" />
+    </linearGradient>
+    <filter id="slimeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="30" fill="url(#acidBg)" stroke="#39ff14" stroke-width="4"/>
+  <!-- Bubbling acid vat in background -->
+  <circle cx="256" cy="256" r="180" fill="#031a03" stroke="#22aa00" stroke-width="2" stroke-dasharray="6 4"/>
+  <!-- Acidic Drops & Splashes -->
+  <g filter="url(#slimeGlow)">
+    <circle cx="150" cy="140" r="14" fill="#39ff14"/>
+    <circle cx="360" cy="150" r="18" fill="#39ff14"/>
+    <circle cx="110" cy="280" r="10" fill="#55ff00"/>
+    <circle cx="400" cy="290" r="15" fill="#55ff00"/>
+    <circle cx="200" cy="90" r="8" fill="#aaff00"/>
+    <circle cx="320" cy="80" r="11" fill="#aaff00"/>
+  </g>
+  <!-- Skull Submerged in Slime -->
+  <path d="M190,160 C190,100 322,100 322,160 C322,190 310,210 295,225 L295,255 L217,255 L217,225 C202,210 190,190 190,160 Z" fill="#e6f2d4" stroke="#88cc44" stroke-width="4"/>
+  <!-- Glowing Eye Sockets -->
+  <ellipse cx="228" cy="165" rx="16" ry="20" fill="#0d2b05"/>
+  <ellipse cx="284" cy="165" rx="16" ry="20" fill="#0d2b05"/>
+  <circle cx="228" cy="165" r="8" fill="#39ff14" filter="url(#slimeGlow)"/>
+  <circle cx="284" cy="165" r="8" fill="#39ff14" filter="url(#slimeGlow)"/>
+  <circle cx="228" cy="165" r="3" fill="#ffffff"/>
+  <circle cx="284" cy="165" r="3" fill="#ffffff"/>
+  <!-- Nasal cavity -->
+  <polygon points="256,185 248,205 264,205" fill="#0d2b05"/>
+  <!-- Skull Teeth -->
+  <rect x="225" y="235" width="10" height="18" rx="2" fill="#d2e4ba" stroke="#226600"/>
+  <rect x="238" y="235" width="10" height="18" rx="2" fill="#d2e4ba" stroke="#226600"/>
+  <rect x="251" y="235" width="10" height="18" rx="2" fill="#d2e4ba" stroke="#226600"/>
+  <rect x="264" y="235" width="10" height="18" rx="2" fill="#d2e4ba" stroke="#226600"/>
+  <rect x="277" y="235" width="10" height="18" rx="2" fill="#d2e4ba" stroke="#226600"/>
+  <!-- Dripping acid layer draped over the skull -->
+  <path d="M180,180 Q210,240 230,190 Q256,260 280,190 Q305,250 332,180 C340,240 330,320 256,380 C182,320 172,240 180,180 Z" fill="url(#slimeGreen)" opacity="0.82" filter="url(#slimeGlow)"/>
+  <!-- Ribcage underneath in slime pool -->
+  <path d="M220,290 Q256,310 292,290 M210,320 Q256,345 302,320 M215,350 Q256,375 297,350" fill="none" stroke="#d5e8b5" stroke-width="5" stroke-linecap="round"/>
+  <!-- Bottom banner -->
+  <rect x="96" y="440" width="320" height="42" rx="8" fill="#061c06" stroke="#39ff14" stroke-width="1.5" opacity="0.9"/>
+  <text x="256" y="467" font-family="'Cinzel', serif, sans-serif" font-size="18" font-weight="bold" fill="#39ff14" text-anchor="middle" letter-spacing="3">ACID SKULLLORD</text>
+</svg>

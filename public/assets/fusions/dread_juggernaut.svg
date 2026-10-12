@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="juggBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a0505" />
+      <stop offset="70%" stop-color="#120202" />
+      <stop offset="100%" stop-color="#050000" />
+    </radialGradient>
+    <linearGradient id="armorMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a4a52" />
+      <stop offset="50%" stop-color="#222228" />
+      <stop offset="100%" stop-color="#111115" />
+    </linearGradient>
+    <linearGradient id="bloodGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a1a" />
+      <stop offset="100%" stop-color="#800000" />
+    </linearGradient>
+    <filter id="crimsonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="30" fill="url(#juggBg)" stroke="#ff1a1a" stroke-width="4"/>
+  <!-- Dark Sigil Behind -->
+  <polygon points="256,60 410,210 350,390 162,390 102,210" fill="none" stroke="#601010" stroke-width="3" opacity="0.6"/>
+  <!-- Heavy Shoulders / Pauldrons -->
+  <g filter="url(#crimsonGlow)">
+    <polygon points="120,180 60,250 140,320 180,240" fill="url(#armorMetal)" stroke="#ff3333" stroke-width="2"/>
+    <polygon points="392,180 452,250 372,320 332,240" fill="url(#armorMetal)" stroke="#ff3333" stroke-width="2"/>
+    <!-- Spikes on Pauldrons -->
+    <polygon points="80,180 60,130 110,165" fill="#111" stroke="#ff1a1a" stroke-width="2"/>
+    <polygon points="432,180 452,130 402,165" fill="#111" stroke="#ff1a1a" stroke-width="2"/>
+  </g>
+  <!-- Massive Torso & Chestplate -->
+  <polygon points="170,220 342,220 310,380 256,410 202,380" fill="url(#armorMetal)" stroke="#ff2222" stroke-width="3"/>
+  <!-- Skull Helmet of the Juggernaut -->
+  <g filter="url(#crimsonGlow)">
+    <polygon points="200,120 312,120 326,200 256,240 186,200" fill="#15151a" stroke="#ff1a1a" stroke-width="3"/>
+    <polygon points="256,70 286,120 226,120" fill="#252530" stroke="#ff2222" stroke-width="2"/>
+    <!-- Glowing Visor Slits -->
+    <polygon points="220,165 245,170 245,178 220,173" fill="#ff0000"/>
+    <polygon points="292,165 267,170 267,178 292,173" fill="#ff0000"/>
+    <circle cx="233" cy="170" r="3" fill="#ffffff"/>
+    <circle cx="279" cy="170" r="3" fill="#ffffff"/>
+  </g>
+  <!-- Ribcage Bone Plating -->
+  <path d="M210,250 Q256,270 302,250 M215,280 Q256,300 297,280 M225,310 Q256,330 287,310 M235,340 Q256,360 277,340" fill="none" stroke="#ff3333" stroke-width="4" stroke-linecap="round"/>
+  <!-- Label Banner -->
+  <rect x="86" y="440" width="340" height="42" rx="8" fill="#180404" stroke="#ff1a1a" stroke-width="1.5" opacity="0.9"/>
+  <text x="256" y="467" font-family="'Cinzel', serif, sans-serif" font-size="17" font-weight="bold" fill="#ff3333" text-anchor="middle" letter-spacing="3">DREAD JUGGERNAUT</text>
+</svg>

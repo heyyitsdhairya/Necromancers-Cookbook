@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="prismBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a0845" />
+      <stop offset="70%" stop-color="#0f051d" />
+      <stop offset="100%" stop-color="#05020a" />
+    </radialGradient>
+    <linearGradient id="prismGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffff" />
+      <stop offset="50%" stop-color="#bd00ff" />
+      <stop offset="100%" stop-color="#ff0055" />
+    </linearGradient>
+    <linearGradient id="prismGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe600" />
+      <stop offset="50%" stop-color="#00ffcc" />
+      <stop offset="100%" stop-color="#7000ff" />
+    </linearGradient>
+    <filter id="prismGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="30" fill="url(#prismBg)" stroke="#bd00ff" stroke-width="4"/>
+  <!-- Arcane Circle -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#7000ff" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#00ffff" stroke-width="1.5" opacity="0.4"/>
+  <!-- Prismatic Wings -->
+  <g filter="url(#prismGlow)">
+    <polygon points="256,120 120,180 180,270 256,220" fill="url(#prismGrad1)" opacity="0.85"/>
+    <polygon points="256,120 392,180 332,270 256,220" fill="url(#prismGrad2)" opacity="0.85"/>
+    <polygon points="256,220 90,260 160,340 256,300" fill="url(#prismGrad2)" opacity="0.8"/>
+    <polygon points="256,220 422,260 352,340 256,300" fill="url(#prismGrad1)" opacity="0.8"/>
+    <!-- Central Diamond Core -->
+    <polygon points="256,80 320,230 256,380 192,230" fill="url(#prismGrad1)" stroke="#ffffff" stroke-width="3"/>
+    <polygon points="256,140 295,230 256,320 217,230" fill="#ffffff" opacity="0.9"/>
+    <!-- Floating Shards -->
+    <polygon points="256,50 268,75 256,100 244,75" fill="#00ffff"/>
+    <polygon points="130,120 145,140 130,160 115,140" fill="#ff00bb"/>
+    <polygon points="382,120 397,140 382,160 367,140" fill="#00ffcc"/>
+    <polygon points="256,410 270,435 256,460 242,435" fill="#bd00ff"/>
+  </g>
+  <!-- Prismatic Light Beams -->
+  <line x1="256" y1="40" x2="256" y2="472" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+  <line x1="40" y1="256" x2="472" y2="256" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+  <!-- Label Banner -->
+  <rect x="96" y="440" width="320" height="42" rx="8" fill="#110524" stroke="#00ffff" stroke-width="1.5" opacity="0.9"/>
+  <text x="256" y="467" font-family="'Cinzel', serif, sans-serif" font-size="18" font-weight="bold" fill="#00ffff" text-anchor="middle" letter-spacing="3">PRISM ARCHON</text>
+</svg>
